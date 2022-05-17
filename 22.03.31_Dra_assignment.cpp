@@ -16,7 +16,7 @@ int main(void) {
     cout << "\n<특정 배수만 출력하는 프로그램>" << endl;
 
     for (num2 = 0; num2 < num1; num2++)   /*개수를 입력받은 만큼 출력*/ {
-        cout << "\n" << num2 << "번째 특정 배수 : ";
+        cout << "\n\n" << num2 << "번째 특정 배수 : ";
         cin >> dra;
         cout << "<특정 배수만 출력하는 프로그램>" << endl;
 

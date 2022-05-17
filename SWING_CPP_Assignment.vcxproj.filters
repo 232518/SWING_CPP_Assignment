@@ -15,10 +15,22 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="movie_seat_assignment.cpp">
+    <ClCompile Include="22.03.31_movie_seat_assignment.cpp">
       <Filter>리소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Dra_assignment.cpp">
+    <ClCompile Include="22.03.31_Dra_assignment.cpp">
+      <Filter>리소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="22.05.05_bank_service.cpp">
+      <Filter>리소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="22.05.05_documentation.cpp">
+      <Filter>리소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="22.05.12_square.cpp">
+      <Filter>리소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="22.05.12_ShapeArea.cpp">
       <Filter>리소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
