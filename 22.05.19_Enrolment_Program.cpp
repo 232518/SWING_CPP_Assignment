@@ -44,8 +44,8 @@ private:
 	string list_name[3] = { "c++ 프로그래밍", "linux 프로그래밍", "리버싱" };	// 강의 이름
 	string list_number[3] = {"0001", "0002", "0003"};	// 강의 학수번호
 	string choice;	// 추가할 학수번호 입력
-	string number;	// 추가된 학수번호 저장
-	string name[];	// 추가된 강의 이름 저장
+	string number[3];	// 추가된 학수번호 저장
+	string name[3];	// 추가된 강의 이름 저장
 public:
 	void printf() {	// 1번 장바구니 기능 함수
 		cout << "========== 강의목록 ==========" << endl;
@@ -55,52 +55,34 @@ public:
 		cout << endl;
 	}
 
-	void bag_course() {	// 2번 강의 담기 기능
+	string bag_course() {	// 2번 강의 담기 기능
 		cout << "추가할 학수 번호 >> ";
 		cin >> choice;
-
-		/*for (i = 0; ; i++) {
-			if (choice == list_number[i]) {	// number의 수가 list_number[i]와 일치한다면 >> number 가 0001 이라면 list_number[0]과 일치한다.
-				if (number == choice) {	// 
-					cout << "이미 MY 장바구니에 담겨져 있습니다." << endl;
-					break;
-				}
-				else {
-					number = choice;	// 추가된 학수번호에 추가할 학수번호를 저장
-					name[0] = list_name[i];	// name[i]에 list_name[i] 저장 >> name[0]에 list_name[0]인 c++ 프로그래밍을 저장
-					break;
-				}
-			}
-			// else if (choice != list_number[i])
-		}*/
-		/*if (choice == list_number[0]) {
-			if (number == choice) {
-				cout << "이미 MY 장바구니에 담겨져 있습니다." << endl;
-			}
-			name[0] == list_name[0];
-			number = choice;
-		}
-
-		else if (choice == list_number[1]) {
-			if (number == choice) {
-				cout << "이미 MY 장바구니에 담겨져 있습니다." << endl;
-			}
-			name[0] == list_name[1];
-			number = choice;
-		}*/
+		cout << endl;
 
 		for (i = 0; ; i++) {
-			if (choice == list_number[i]) {
+			if (choice == list_number[i]) {	// 같을 경우
+				if (number[0] == choice || number[1] == choice || number[2] == choice) {	// 이미 있는 경우
+					cout << "이미 MY 장바구니에 담겨져 있습니다." << endl;
+					cout << endl;
+				}
+				number[i] = choice;
+				name[i] = list_name[i];
+				return name[i];
+				break;
+			}
 
+			else if (choice != list_number[i]) {	// 아닐 경우
+				break;
 			}
 		}
 	}
 
 	void put_bag() {	// 3번 수강신청 확인 기능
 		cout << "======== My 장바구니 ========" << endl;
-		cout << "1. " << name[0] << endl;
-		cout << "2. " << name[1] << endl;
-		cout << "3. " << name[2] << endl;
+		for (i = 1; ; i++) {
+			cout << i << ". " << name[i] << endl;
+		}
 	}
 };
 
@@ -169,6 +151,7 @@ int main(void) {
 					cout << "4. 로그아웃" << endl;
 					cout << "번호를 입력하세요 : ";
 					cin >> number2;
+					cout << endl;
 
 					if (number2 == 1) {
 						c.printf();
@@ -179,7 +162,7 @@ int main(void) {
 					}
 
 					else if (number2 == 3) {
-
+						c.put_bag();
 					}
 
 					else if (number2 == 4) {
