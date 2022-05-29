@@ -42,7 +42,7 @@ class Cart {
 private:
 	int i;
 	string list_name[3] = { "c++ 프로그래밍", "linux 프로그래밍", "리버싱" };	// 강의 이름
-	string list_number[3] = {"0001", "0002", "0003"};	// 강의 학수번호
+	string list_number[3] = { "0001", "0002", "0003" };	// 강의 학수번호
 	string choice;	// 추가할 학수번호 입력
 	string number[3];	// 추가된 학수번호 저장
 	string name[3];	// 추가된 강의 이름 저장
@@ -95,14 +95,14 @@ int main(void) {
 
 	Member m;
 	Member* p_m = &m;
-	
+
 	string* N = new string;
 	string* I = new string;
 	string* P = new string;
 
 	Cart c;
-	
-	
+
+
 	for (i = 0; ; i++) {
 		cout << "--------------------- 서울여자대학교 종합정보시스템 ---------------------" << endl;
 		cout << "1. 회원가입" << endl;
