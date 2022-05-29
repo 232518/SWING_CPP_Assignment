@@ -1,6 +1,5 @@
 #ifndef Shape_H
 #define Shape_H
-#include <iostream>
 using namespace std;
 
 class Shape {
