@@ -42,6 +42,9 @@
     <ClCompile Include="22.05.19_Enrolment_Program.cpp">
       <Filter>리소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="22.06.02_Character.cpp">
+      <Filter>리소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="22.05.19_Class_header_file.h">

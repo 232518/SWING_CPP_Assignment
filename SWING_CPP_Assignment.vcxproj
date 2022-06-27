@@ -163,7 +163,10 @@
     <ClCompile Include="22.05.19_Class_Main.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="22.05.19_Enrolment_Program.cpp" />
+    <ClCompile Include="22.05.19_Enrolment_Program.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="22.06.02_Character.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="22.05.19_Class_header_file.h">
