@@ -43,9 +43,10 @@ private:
 	int i;
 	string list_name[3] = { "c++ 프로그래밍", "linux 프로그래밍", "리버싱" };	// 강의 이름
 	string list_number[3] = { "0001", "0002", "0003" };	// 강의 학수번호
-	string choice;	// 추가할 학수번호 입력
-	string number[3];	// 추가된 학수번호 저장
-	string name[3];	// 추가된 강의 이름 저장
+	string choice[1];
+	string add_name[3];
+	string add_number[3];
+
 public:
 	void printf() {	// 1번 장바구니 기능 함수
 		cout << "========== 강의목록 ==========" << endl;
@@ -57,31 +58,28 @@ public:
 
 	string bag_course() {	// 2번 강의 담기 기능
 		cout << "추가할 학수 번호 >> ";
-		cin >> choice;
+		cin >> choice[1];
 		cout << endl;
 
-		for (i = 0; ; i++) {
-			if (choice == list_number[i]) {	// 같을 경우
-				if (number[0] == choice || number[1] == choice || number[2] == choice) {	// 이미 있는 경우
-					cout << "이미 MY 장바구니에 담겨져 있습니다." << endl;
-					cout << endl;
-				}
-				number[i] = choice;
-				name[i] = list_name[i];
-				return name[i];
-				break;
-			}
+		for (i = 0; i < 3; i++) {
+			if (choice[1] == list_number[i]) {
+				add_number[i] = list_number[i];
+				add_name[i] = list_name[i];
 
-			else if (choice != list_number[i]) {	// 아닐 경우
-				break;
+				return add_name[i];
+				
+			}
+			else if (choice[1] == add_number[0] || choice[1] == add_number[1] || choice[1] == add_number[2]) {
+				cout << "이미 MY 장바구니에 담겨져 있습니다." << endl;
 			}
 		}
 	}
 
-	void put_bag() {	// 3번 수강신청 확인 기능
+	void put_bag() {
+		int j = i - 1;
 		cout << "======== My 장바구니 ========" << endl;
-		for (i = 1; ; i++) {
-			cout << i << ". " << name[i] << endl;
+		for (i = 1; i <= 3; i++) {
+			cout << i << ". " << add_name[i] << endl;
 		}
 	}
 };
@@ -168,6 +166,7 @@ int main(void) {
 					else if (number2 == 4) {
 						cout << "---------- 로그아웃 ----------" << endl;
 						cout << "로그아웃 되었습니다. 안녕히 가세요." << endl;
+						cout << endl;
 						break;
 					}
 
